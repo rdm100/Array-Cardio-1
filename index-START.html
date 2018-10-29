@@ -25,7 +25,12 @@
       { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-    ]; 76, 84, 78, 67, 59, 70, 89, 81, 37, 50, 90, 80
+    ];
+
+    const inventors2 = [
+      { first: 'Albert', last: 'Einstein', year: 50, passed: 100 },
+      { first: 'Isaac', last: 'Newton', year: 50, passed: 100 }
+    ];
 
     const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
@@ -43,7 +48,7 @@
     // console.log(inventors.reduce((accumulator, currentValue) => accumulator + (currentValue.passed - currentValue.year), 0));
     console.log(inventors.reduce((accumulator, inventor) => accumulator + (inventor.passed - inventor.year), 0));
     // 5. Sort the inventors by years lived
-
+    console.table(inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1));
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
