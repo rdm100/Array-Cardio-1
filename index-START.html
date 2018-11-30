@@ -43,7 +43,7 @@
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
     // console.log(inventors.reduce((accumulator, currentValue) => accumulator + (currentValue.passed - currentValue.year), 0));
-    console.log(inventors.reduce((accumulator, inventor) => accumulator + (inventor.passed - inventor.year), 0));
+    console.table(inventors.reduce((accumulator, inventor) => accumulator + (inventor.passed - inventor.year), 0));
     // 5. Sort the inventors by years lived
     console.table(inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1));
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -57,8 +57,12 @@
     // Sort the people alphabetically by last name
     const names = people.sort((a, b) => {
     const [alast, afirst] = a.split(', ');
+    const alast2 = a.split(', ')[0];
+    console.log(alast2);
     const [blast, bfirst] = b.split(', ');
-    alast - blast;
+    const blast2 = a.split(', ')[0];
+    console.log(alast2);
+    alast2 - blast2;
     });
     console.log(names);
     // 8. Reduce Exercise
